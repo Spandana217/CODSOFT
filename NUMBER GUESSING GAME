@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    string name;
+    cout << "and what is your name?";
+   cin >> name;
+   cout <<(name);
+   int randomnumber = rand() % 100 + 1; // create a random number from 1-100
+   cout << "Welcome the guess a number game. Please guess a number from 1 to 100!" << endl;
+   int tries = 1;
+   int guess = 0;
+   while (guess != 98){
+        cout << "Guess! ";
+        cin >> guess;
+            if (guess < 98) {
+                cout << "Woops - too low. Try again." << endl;
+            }else if (guess > 98) {
+                cout << "Too high. Try again. "  << endl;
+            }
+        tries ++;
+        }
+        string comment;
+        if (tries < 10) {
+            comment = " - you are a superstar!";
+        } else if (tries > 30) {
+            comment = "Uhm.. That took you a long time.";
+        }
+        cout << "Great job you only took " << tries << " attempts!" << comment;
+
+    return 0;
+}
